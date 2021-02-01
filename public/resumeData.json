@@ -51,10 +51,10 @@
     ],
     "work": [
       {
-        "company": "Clever Programmer",
+        "company": "MarketCOL",
         "title": "Team Member && React Specialist",
-        "years": "April 2020 - Present",
-        "description": "Teaching ReactJS to thousands of students."
+        "years": "Sept 2019 - Present",
+        "description": " ReactJS Developer."
       }
       
     ],
@@ -103,19 +103,7 @@
         "title": "MERN Stack Shopify Clone",
         "category": "Shopify Clone built with MERN (MongoDB, ExpressJS, ReactJS, NodeJS)",
         "image": "tiktok-mern.jpeg",
-        "url": "https://60174142d7c90cc2188fc32e--hardcore-wozniak-bd9df4.netlify.app/"
-      },
-      {
-        "title": "Facebook Clone with React",
-        "category": "Facebook Clone built with ReactJS",
-        "image": "facebook-clone.png",
-        "url": "https://www.youtube.com/watch?v=B-kxUMHBxNo"
-      },
-      {
-        "title": "Airbnb Clone",
-        "category": "Facebook Clone built with ReactJS",
-        "image": "airbnb-clone.jpeg",
-        "url": "https://www.youtube.com/watch?v=BtJeH_-XYaA"
+        "url": "https://marketcol-969cf.web.app/"
       },
       {
         "title": "Netflix Clone",
