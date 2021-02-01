@@ -1,0 +1,140 @@
+{
+  "main": {
+    "name": "Darshan Patel",
+    "occupation": "ReactJS Developer",
+    "description": "Full Stack React Developer",
+    "image": "dp.jpeg",
+    "bio": "My name is Darshan Patel, I'm a Full Stack ReactJS Developer. Currently I'm working at projects ",
+    "contactmessage": "Get in touch with me to receive further details, or anything else.",
+    "email": "patel7darshan97@gmail.com",
+    "phone": "+1 (848)2358321",
+    "address": {
+      "street": "2 Dayton dr APT #8A",
+      "city": "Edison",
+      "state": "NJ",
+      "zip": "08820"
+    },
+    "website": "http://www.patels.com",
+    "resumedownload": "https://drive.google.com/file/d/1vORfilweu1PA-kunMDtPxGnk5lgcVBxq/view?usp=sharing",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/imdp7",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/darshan-patel-001876191/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/imdp7/",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "http://github.com/imdp7",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "education": [
+      {
+        "school": "New Jersey Institute of Technology",
+        "degree": "Masters in Computer Science",
+        "graduated": "May 2022",
+        "description": "In Progress"
+      }
+    ],
+    "work": [
+      {
+        "company": "Clever Programmer",
+        "title": "Team Member && React Specialist",
+        "years": "April 2020 - Present",
+        "description": "Teaching ReactJS to thousands of students."
+      }
+      
+    ],
+    "skills": [
+      {
+        "name": "ReactJs",
+        "level": "100%"
+      },
+      
+      {
+        "name": "Express",
+        "level": "75%"
+      },
+      
+      {
+        "name": "MongoDB",
+        "level": "80%"
+      },
+      {
+        "name": "NodeJS",
+        "level": "80%"
+      },
+      {
+        "name": "HTML5",
+        "level": "90%"
+      },
+      {
+        "name": "CSS",
+        "level": "95%"
+      },
+      {
+        "name": "Git",
+        "level": "60%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Robinhood Clone",
+        "category": "Build with MERN (MongoDB, ExpressJS, ReactJS, NodeJS,Firebase)",
+        "image": "whatsapp-mern.jpeg",
+        "url": "https://robinhood--97.web.app/"
+      },
+      {
+        "title": "MERN Stack Shopify Clone",
+        "category": "Shopify Clone built with MERN (MongoDB, ExpressJS, ReactJS, NodeJS)",
+        "image": "tiktok-mern.jpeg",
+        "url": "https://60174142d7c90cc2188fc32e--hardcore-wozniak-bd9df4.netlify.app/"
+      },
+      {
+        "title": "Facebook Clone with React",
+        "category": "Facebook Clone built with ReactJS",
+        "image": "facebook-clone.png",
+        "url": "https://www.youtube.com/watch?v=B-kxUMHBxNo"
+      },
+      {
+        "title": "Airbnb Clone",
+        "category": "Facebook Clone built with ReactJS",
+        "image": "airbnb-clone.jpeg",
+        "url": "https://www.youtube.com/watch?v=BtJeH_-XYaA"
+      },
+      {
+        "title": "Netflix Clone",
+        "category": "Netflix Clone built with ReactJS",
+        "image": "netflix-clone.jpeg",
+        "url": "https://netflix-90293.web.app/"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user": "Kareem Abdul Jabbar"
+      },
+      {
+        "text": "That Darshan Patel must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user": "Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
