@@ -19,12 +19,11 @@ class Footer extends Component {
            </ul>
 
            <ul>
-            <li>Modified with love by the Imdp7 team <span role="img" aria-label="Connect">♥️</span></li>
+            <li>Modified with love by the Imdp7 <span role="img" aria-label="Connect">♥️</span></li>
            </ul>
 
            <ul className="copyright">
-              <li>&copy; All credit goes to Tim Baker - Copyright 2017 Tim Baker</li>
-              <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+              <li>&copy; All credit goes to Darshan Patel - Copyright 2022 IMDP7</li>
            </ul>
 
         </div>
