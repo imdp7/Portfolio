@@ -9,7 +9,7 @@
     "email": "patel7darshan97@gmail.com",
     "phone": "+1 (848)2358321",
     "address": {
-      "street": "2 Dayton dr APT #8A",
+      "street": "2 Dayton dr",
       "city": "Edison",
       "state": "NJ",
       "zip": "08820"
@@ -72,7 +72,7 @@
       {
         "company": "Learning Assistant at NJIT",
         "title": "",
-        "years": "Jun 2019 - Aug 2019",
+        "years": "Jun 2020 - Aug 2020",
         "description": [
            {
              "one": "Facilitated 20+ workshops and discussions to help 40+ students with courses in Computer Science.",
@@ -139,6 +139,13 @@
         "image": "1.png",
         "url": "https://awsui.netlify.app/",
         "github": "https://github.com/imdp7/aws-ui"
+      },
+      {
+        "title": "Yahoo Finance (Premium)",
+        "category": "Build with ReactJS, GraphQL, AWS Amplify)",
+        "image": "YH.png",
+        "url": "https://yhfinance.netlify.app/",
+        "github": "https://github.com/imdp7/YahooFinance"
       },
       {
         "title": "Robinhood Clone",
