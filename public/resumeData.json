@@ -1,10 +1,10 @@
 {
   "main": {
     "name": "Darshan Patel",
-    "occupation": "Front End Engineer",
-    "description": "Full Stack React Developer with Typescript and AWS cloud Services skills",
+    "occupation": "Software Engineer",
+    "description": "Full Stack React Java Developer with Typescript and AWS cloud Services skills",
     "image": "dp.jpeg",
-    "bio": "My name is Darshan Patel, I'm a Full Stack ReactJS Developer. Currently I'm working at projects ",
+    "bio": "My name is Darshan Patel, I'm a Full Stack ReactJS Developer. Currently I'm working at Clearpool Group.",
     "contactmessage": "Get in touch with me to receive further details, or anything else.",
     "email": "patel7darshan97@gmail.com",
     "phone": "+1 (848)2358321",
@@ -59,9 +59,20 @@
     ],
     "work": [
       {
+        "company": "Clearpool Group/BMO",
+        "title": "Software Developer",
+        "years": "Jun 2023 - Present",
+        "description": [
+           {
+             "one": "Worked and developed web components to improve the usage into multiple use case.",
+             "two": "Worked on server side i.e, Java Spring to accommodate front end compatibility with different environments and cherry-picking commits to release branches for QA testing.",
+             "three" : "Maintaining code structure and writing Jest and Junit unit test to test and deploy the changes on jenkins."
+           }]
+      },
+      {
         "company": "MarketCOL",
         "title": "Team Member && React Specialist",
-        "years": "Sept 2019 - Present",
+        "years": "Sept 2019 - Feb 2023",
         "description": [
            {
              "one": "Designed Dashboard components and testing methods to increase the efficiency of application by 20%.",
@@ -102,6 +113,10 @@
         "level": "80%"
       },
       {
+        "name": "Java",
+        "level": "70%"
+      },
+      {
         "name": "Express",
         "level": "75%"
       },
@@ -123,7 +138,7 @@
       },
       {
         "name": "Git",
-        "level": "80%"
+        "level": "90%"
       },
       {
         "name": "CI/CD",
