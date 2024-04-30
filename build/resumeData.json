@@ -1,21 +1,21 @@
 {
   "main": {
     "name": "Darshan Patel",
-    "occupation": "ReactJS Developer",
-    "description": "Full Stack React Developer",
+    "occupation": "Software Engineer",
+    "description": "Full Stack React Java Developer with Typescript and AWS cloud Services skills",
     "image": "dp.jpeg",
-    "bio": "My name is Darshan Patel, I'm a Full Stack ReactJS Developer. Currently I'm working at projects ",
+    "bio": "My name is Darshan Patel, I'm a Full Stack ReactJS Developer. Currently I'm working at Clearpool Group.",
     "contactmessage": "Get in touch with me to receive further details, or anything else.",
     "email": "patel7darshan97@gmail.com",
     "phone": "+1 (848)2358321",
     "address": {
-      "street": "2 Dayton dr APT #8A",
+      "street": "2 Dayton dr",
       "city": "Edison",
       "state": "NJ",
       "zip": "08820"
     },
     "website": "http://patelsportfolio.netlify.app",
-    "resumedownload": "Resume-2022.pdf",
+    "resumedownload": "Darshan_Patel_001.pdf",
     "social": [
       {
         "name": "facebook",
@@ -40,23 +40,67 @@
     ]
   },
   "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage": "* Techincal skills acquired",
     "education": [
       {
         "school": "New Jersey Institute of Technology",
         "degree": "Masters in Computer Science",
         "graduated": "May 2022",
-        "description": "In Progress"
+        "description": "Completed",
+        "fa" : "fa fa-check"
+      },
+      {
+        "school": "Gujarat Technical University",
+        "degree": "Bachelors in Computer Science",
+        "graduated": "June 2020",
+        "description": "Completed",
+        "fa" : "fa fa-check"
       }
     ],
     "work": [
       {
+        "company": "Clearpool Group/BMO",
+        "title": "Software Developer",
+        "years": "Jun 2023 - Present",
+        "description": [
+           {
+             "one": "Worked and developed web components to improve the usage into multiple use case.",
+             "two": "Worked on server side i.e, Java Spring to accommodate front end compatibility with different environments and cherry-picking commits to release branches for QA testing.",
+             "three" : "Maintaining code structure and writing Jest and Junit unit test to test and deploy the changes on jenkins."
+           }]
+      },
+      {
         "company": "MarketCOL",
         "title": "Team Member && React Specialist",
-        "years": "Sept 2019 - Present",
-        "description": " ReactJS Developer."
+        "years": "Sept 2019 - Feb 2023",
+        "description": [
+           {
+             "one": "Designed Dashboard components and testing methods to increase the efficiency of application by 20%.",
+             "two": "Revamped 30+ web components using HTML, CSS and designing tools improve functionalities by 50%",
+             "three" : "Refactoring code for maintaining and scalability of the application, providing additional perspective reviewing code."
+           }]
+      },
+      {
+        "company": "Learning Assistant at NJIT",
+        "title": "",
+        "years": "Jun 2020 - Aug 2020",
+        "description": [
+           {
+             "one": "Facilitated 20+ workshops and discussions to help 40+ students with courses in Computer Science.",
+             "two": "Developed 5 tutorials on how to write computer programs and solve engineering problems.",
+             "three": ""
+           }]
+      },
+      {
+        "company": "SunTrust Bank",
+        "title": "Front End Developer",
+        "years": "Jan 2019 - May 2019",
+        "description": [
+           {
+             "one": "Assisted in building beautiful UI for clients without compromising functionality for aesthetics.",
+             "two": "Unit testing in Jest to ensure code was 100% bug free."
+           }]
       }
-      
     ],
     "skills": [
       {
@@ -65,17 +109,24 @@
       },
       
       {
+        "name": "Typescript",
+        "level": "80%"
+      },
+      {
+        "name": "Java",
+        "level": "70%"
+      },
+      {
         "name": "Express",
         "level": "75%"
-      },
-      
-      {
-        "name": "MongoDB",
-        "level": "80%"
       },
       {
         "name": "NodeJS",
         "level": "80%"
+      },
+      {
+        "name": "AWS Cloud",
+        "level": "75%"
       },
       {
         "name": "HTML5",
@@ -87,42 +138,64 @@
       },
       {
         "name": "Git",
-        "level": "60%"
+        "level": "90%"
+      },
+      {
+        "name": "CI/CD",
+        "level": "90%"
       }
     ]
   },
   "portfolio": {
     "projects": [
       {
+        "title": "AWS FrontEnd (Cloudscape)",
+        "category": "Build with ReactJS, GraphQL, AWS Amplify)",
+        "image": "1.png",
+        "url": "https://awsui.netlify.app/",
+        "github": "https://github.com/imdp7/aws-ui"
+      },
+      {
+        "title": "Yahoo Finance (Premium)",
+        "category": "Build with ReactJS, GraphQL, AWS Amplify)",
+        "image": "YH.png",
+        "url": "https://yhfinance.netlify.app/",
+        "github": "https://github.com/imdp7/YahooFinance"
+      },
+      {
         "title": "Robinhood Clone",
         "category": "Build with MERN (MongoDB, ExpressJS, ReactJS, NodeJS,Firebase)",
         "image": "robinhood.png",
-        "url": "https://robinhood--97.web.app/"
+        "url": "https://robinhood--97.web.app/",
+        "github": "https://github.com/imdp7/Robinhood"
       },
       {
         "title": "MERN Stack Shopify Clone",
         "category": "Shopify Clone built with MERN (MongoDB, ExpressJS, ReactJS, NodeJS)",
         "image": "shopify.png",
-        "url": "https://marketcol-969cf.web.app/"
+        "url": "https://marketcol-969cf.web.app/",
+        "github": "https://github.com/imdp7/Shopify"
       },
       {
         "title": "Netflix Clone",
         "category": "Netflix Clone built with ReactJS",
         "image": "netflix-clone.jpeg",
-        "url": "https://netflix-90293.web.app/"
+        "url": "https://netflix-97.netlify.app/",
+        "github": "https://github.com/imdp7/Netflix"
       },
       {
         "title": "Next.js Ruchimandal (Religious)",
         "category": "Ruchimandal built with Next.js and React.js GraphQL( ReactJS, Next.js)",
         "image": "Ruchimandal.png",
-        "url": "https://ruchimandal.vercel.app/"
+        "url": "https://ruchimandal.vercel.app/",
+        "github": "https://github.com/imdp7/Ruchimandal"
       }
     ]
   },
   "testimonials": {
     "testimonials": [
       {
-        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "text": "Darshan is one of the best among all people I have ever met and is a loyal colleague, understands complex matters. Darshan is a strong and goal oriented team player; with every problem there was a solution. Highly recommended.",
         "user": "Kareem Abdul Jabbar"
       },
       {

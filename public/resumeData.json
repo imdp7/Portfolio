@@ -15,7 +15,7 @@
       "zip": "08820"
     },
     "website": "http://patelsportfolio.netlify.app",
-    "resumedownload": "Darshan_Patel_001.pdf",
+    "resumedownload": "Resume 2024.pdf",
     "social": [
       {
         "name": "facebook",
@@ -40,7 +40,7 @@
     ]
   },
   "resume": {
-    "skillmessage": "* Techincal skills acquired",
+    "skillmessage": "* Technical skills acquired",
     "education": [
       {
         "school": "New Jersey Institute of Technology",
@@ -59,7 +59,7 @@
     ],
     "work": [
       {
-        "company": "Clearpool Group/BMO",
+        "company": "Clearpool Group/BMO Global Trading",
         "title": "Software Developer",
         "years": "Jun 2023 - Present",
         "description": [
@@ -98,7 +98,7 @@
         "description": [
            {
              "one": "Assisted in building beautiful UI for clients without compromising functionality for aesthetics.",
-             "two": "Unit testing in Jest to ensure code was 100% bug free."
+             "two": "Unit testing in Jest to ensure code was 100mostly bug free."
            }]
       }
     ],
@@ -114,6 +114,10 @@
       },
       {
         "name": "Java",
+        "level": "70%"
+      },
+      {
+        "name": "PostgreSQL",
         "level": "70%"
       },
       {
