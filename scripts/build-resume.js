@@ -23,6 +23,31 @@ const DATA = path.join(PUBLIC, "resumeData.json");
 const NAVY = "#1F3864";
 const GREY = "#444444";
 
+// Floor for the shrink-to-one-page pass. Below roughly this the body text
+// stops being comfortably readable in print, so it is better to fail and trim
+// the content than to keep scaling.
+const MIN_SCALE_PCT = 85;
+
+// Chrome resolves `sans-serif` to a different face per OS — Helvetica on
+// macOS, DejaVu Sans on Netlify's Linux image — and DejaVu is wide enough to
+// push this one-pager onto a second page. Embedding the font as a data URI
+// makes the metrics identical on every machine. Carlito is metric-compatible
+// with the Calibri this resume was designed around.
+const FONT_DIR = path.join(ROOT, "node_modules", "@fontsource", "carlito", "files");
+const FACES = [
+  ["carlito-latin-400-normal.woff2", 400, "normal"],
+  ["carlito-latin-400-italic.woff2", 400, "italic"],
+  ["carlito-latin-700-normal.woff2", 700, "normal"],
+  ["carlito-latin-700-italic.woff2", 700, "italic"],
+];
+
+function fontFaces() {
+  return FACES.map(([file, weight, style]) => {
+    const b64 = fs.readFileSync(path.join(FONT_DIR, file)).toString("base64");
+    return `@font-face{font-family:Carlito;font-weight:${weight};font-style:${style};src:url(data:font/woff2;base64,${b64}) format("woff2")}`;
+  }).join("\n");
+}
+
 const esc = (s) =>
   String(s)
     .replace(/&/g, "&amp;")
@@ -130,6 +155,17 @@ function skills(groups) {
     .join("");
 }
 
+// Page count straight from the PDF, so "one page" is verified against the
+// real output rather than inferred from the pre-render measurement.
+function pdfPageCount(buf) {
+  const raw = buf.toString("latin1");
+  const counts = [...raw.matchAll(/\/Type\s*\/Pages\b[^>]*?\/Count\s+(\d+)/g)].map(
+    (m) => Number(m[1])
+  );
+  if (counts.length) return Math.max(...counts);
+  return (raw.match(/\/Type\s*\/Page[^s]/g) || []).length;
+}
+
 function buildHtml(data) {
   const { main, resume } = data;
   return `<!doctype html>
@@ -138,13 +174,14 @@ function buildHtml(data) {
 <meta charset="utf-8">
 <title>${esc(main.name)} — ${esc(main.occupation)}</title>
 <style>
+${fontFaces()}
   @page { size: Letter; margin: 0.26in 0.45in; }
   * { box-sizing: border-box; }
   html { color-scheme: light; }
   body {
     margin: 0;
     background: #FFFFFF;
-    font-family: Calibri, Carlito, "Segoe UI", Candara, sans-serif;
+    font-family: Carlito, Calibri, "Segoe UI", Candara, sans-serif;
     font-size: 9.5pt;
     line-height: 1.15;
     color: #111111;
@@ -266,13 +303,47 @@ async function main() {
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: "load" });
-    await page.pdf({
-      path: OUT,
-      format: "Letter",
-      printBackground: true,
-      preferCSSPageSize: true,
-    });
-    console.log(`[resume] wrote ${path.relative(ROOT, OUT)}`);
+    // Measure against the real faces, not the fallback shown while the
+    // embedded woff2 is still decoding.
+    await page.evaluate(() => document.fonts.ready);
+
+    // The layout is tuned to fill the page almost to the millimetre, so a
+    // small metric difference can spill one line onto a second page. Chrome's
+    // print scale is the lever that actually moves the page break: an in-page
+    // `zoom` measured against scrollHeight does not match how the print box
+    // paginates and will happily report a fit that renders as two pages. So
+    // step the scale down against the real page count, and render to a buffer
+    // so a two-page layout can never overwrite the good PDF.
+    let pdf = null;
+    let usedScale = 1;
+    for (let pct = 100; pct >= MIN_SCALE_PCT; pct -= 1) {
+      const buf = Buffer.from(
+        await page.pdf({
+          format: "Letter",
+          printBackground: true,
+          preferCSSPageSize: true,
+          scale: pct / 100,
+        })
+      );
+      if (pdfPageCount(buf) === 1) {
+        pdf = buf;
+        usedScale = pct;
+        break;
+      }
+    }
+
+    if (!pdf) {
+      return orFail(
+        `the resume still overflows one page at ${MIN_SCALE_PCT}% scale — ` +
+          `trim public/resumeData.json`
+      );
+    }
+    if (usedScale < 100) {
+      console.log(`[resume] scaled to ${usedScale}% to hold one page`);
+    }
+
+    fs.writeFileSync(OUT, pdf);
+    console.log(`[resume] wrote ${path.relative(ROOT, OUT)} (1 page)`);
   } finally {
     await browser.close();
   }
