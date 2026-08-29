@@ -1,0 +1,13 @@
+# Netlify was building on Node 16, where `require("puppeteer")` fails outright
+# (puppeteer 25 needs Node >= 22.12) — which the resume script reported as
+# "puppeteer is not installed". Pin the runtime the script actually needs.
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Keep Chromium inside the repo working dir so it sits alongside the cached
+  # node_modules that triggered its download, instead of in a $HOME dir that
+  # is wiped independently.
+  PUPPETEER_CACHE_DIR = "/opt/build/repo/.cache/puppeteer"

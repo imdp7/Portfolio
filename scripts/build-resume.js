@@ -6,10 +6,11 @@
  * this script reads the same file at build time, and `main.resumedownload`
  * names the output file for both. Edit the JSON, never the PDF.
  *
- * The PDF is a build artifact, not a committed file (see .gitignore), so this
- * runs as an npm `prebuild` step and must succeed: if it cannot render and no
- * PDF is already on disk, it exits non-zero and fails the build rather than
- * letting a deploy ship a download link that 404s.
+ * This runs as an npm `prebuild` step. The freshly rendered PDF is committed
+ * rather than left as a pure build artifact, so a CI box that cannot launch
+ * Chromium falls back to the last good file instead of shipping a download
+ * link that 404s. Only a checkout with neither Chromium nor that PDF fails the
+ * build. Rebuild and commit the PDF whenever you edit the JSON.
  */
 
 const fs = require("fs");
@@ -227,9 +228,9 @@ async function main() {
   }
   const OUT = path.join(PUBLIC, filename);
 
-  // Tolerate a render failure only when a previously built PDF is still on
-  // disk (a local rebuild). On a clean checkout there is nothing to fall back
-  // on, so the build has to fail instead of deploying without the file.
+  // Tolerate a render failure whenever a PDF is still on disk — the committed
+  // one on CI, or a previous render locally. Only a checkout missing both
+  // Chromium and the PDF fails, since that would deploy without the file.
   const orFail = (reason) => {
     if (fs.existsSync(OUT)) {
       console.warn(`[resume] ${reason} — keeping the existing ${filename}.`);
@@ -245,7 +246,12 @@ async function main() {
   try {
     puppeteer = require("puppeteer");
   } catch (err) {
-    return orFail("puppeteer is not installed (run `npm i -D puppeteer`)");
+    // Also the failure mode on too old a Node: puppeteer is present in
+    // node_modules but unloadable, so report what require actually said.
+    return orFail(
+      `puppeteer could not be loaded on node ${process.version} ` +
+        `(needs >=22.12; run \`npm i -D puppeteer\` if it is missing): ${err.message}`
+    );
   }
 
   let browser;

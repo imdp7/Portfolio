@@ -23,5 +23,9 @@ yarn-error.log*
 # Local Netlify folder
 .netlify
 
-# generated resume (built from public/resumeData.json by scripts/build-resume.js)
-public/*.pdf
+# puppeteer's downloaded Chromium (see netlify.toml)
+.cache
+
+# public/Darshan_Patel_Resume.pdf is NOT ignored: it is rebuilt from
+# public/resumeData.json by scripts/build-resume.js, but stays committed so a
+# CI box that cannot launch Chromium still has a PDF to publish.
