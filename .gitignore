@@ -22,3 +22,6 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# generated resume (built from public/resumeData.json by scripts/build-resume.js)
+public/*.pdf

@@ -1,21 +1,22 @@
 {
   "main": {
     "name": "Darshan Patel",
-    "occupation": "Software Engineer",
-    "description": "Full Stack React Java Developer with Typescript and AWS cloud Services skills",
+    "occupation": "Java Software Engineer",
+    "description": "Backend and messaging infrastructure engineer specializing in Java, Spring Boot, Apache Kafka, and CI/CD for distributed trading systems",
     "image": "dp.jpeg",
-    "bio": "My name is Darshan Patel, I'm a Full Stack ReactJS Developer. Currently I'm working at Clearpool Group.",
+    "bio": "My name is Darshan Patel, I'm a Java Software Engineer on the Core Infrastructure team at Clearpool Group (BMO Capital Markets), where I manage Apache Kafka messaging, Java/Spring Boot deployments, and the CI/CD tooling that keeps seven engineering teams shipping to production.",
     "contactmessage": "Get in touch with me to receive further details, or anything else.",
     "email": "patel7darshan97@gmail.com",
-    "phone": "+1 (848)2358321",
+    "phone": "+1 (848) 235-8321",
     "address": {
       "street": "2 Dayton dr",
       "city": "Edison",
       "state": "NJ",
       "zip": "08820"
     },
-    "website": "http://patelsportfolio.netlify.app",
-    "resumedownload": "Resume 2024.pdf",
+    "website": "https://patelsportfolio.netlify.app",
+    "linkedin": "linkedin.com/in/imdp7",
+    "resumedownload": "Darshan_Patel_Resume.pdf",
     "social": [
       {
         "name": "facebook",
@@ -40,93 +41,168 @@
     ]
   },
   "resume": {
-    "skillmessage": "* Technical skills acquired",
+    "summary": "Java Software Engineer with 5+ years building and operating backend and event-driven messaging infrastructure for capital markets trading platforms. Core Infrastructure team member managing 550+ Apache Kafka topics and Java/Spring Boot deployments in production, supporting 60+ live Dynamic Message Object (DMO) data contracts, and remediating 20,000+ Linux and Java dependency vulnerabilities in six months. Re-engineered a bash-based deployment pipeline into a database-driven, multi-threaded process, cutting deployment time 60% (30 minutes to 12). Supports 7 engineering teams across CI/CD, distributed systems, and release management.",
+    "impact": [
+      {
+        "stat": "550+",
+        "label": "Kafka Topics Managed in Production"
+      },
+      {
+        "stat": "20K+",
+        "label": "Vulnerabilities Remediated in 6 Months"
+      },
+      {
+        "stat": "60+",
+        "label": "Live DMOs Supported in Java"
+      },
+      {
+        "stat": "60%",
+        "label": "Faster Deployments (30min → 12min)"
+      }
+    ],
+    "skillmessage": "Core technical skills across backend engineering, event-driven messaging, and cloud infrastructure.",
     "education": [
       {
         "school": "New Jersey Institute of Technology",
-        "degree": "Masters in Computer Science",
+        "location": "Newark, NJ",
+        "degree": "Master of Science, Computer Science",
         "graduated": "May 2022",
         "description": "Completed",
-        "fa" : "fa fa-check"
+        "fa": "fa fa-check"
       },
       {
-        "school": "Gujarat Technical University",
-        "degree": "Bachelors in Computer Science",
-        "graduated": "June 2020",
+        "school": "Gujarat Technological University",
+        "location": "Gujarat, India",
+        "degree": "Bachelor of Engineering, Computer Science",
+        "graduated": "June 2018",
         "description": "Completed",
-        "fa" : "fa fa-check"
+        "fa": "fa fa-check"
       }
     ],
     "work": [
       {
-        "company": "Clearpool Group/BMO Global Trading",
-        "title": "Software Developer",
-        "years": "Jun 2023 - Present",
-        "description": [
-           {
-             "one": "Worked and developed web components to improve the usage into multiple use case.",
-             "two": "Worked on server side i.e, Java Spring to accommodate front end compatibility with different environments and cherry-picking commits to release branches for QA testing.",
-             "three" : "Maintaining code structure and writing Jest and Junit unit test to test and deploy the changes on jenkins."
-           }]
+        "company": "Clearpool Group (BMO Capital Markets)",
+        "title": "Software Development Engineer, Core Infrastructure",
+        "location": "New York, NY",
+        "years": "June 2023 - Present",
+        "highlights": [
+          "Manage 550+ Apache Kafka topics in production, supporting Java-based services and deployments across multiple products organization-wide.",
+          "Re-engineered the deployment pipeline from bash scripting into a database-driven, multi-threaded Java process, reducing deployment time from 30 to 12 minutes (60% faster).",
+          "Triaged and remediated 40,000+ security vulnerabilities in six months across Linux packages and Java (Maven/Gradle) third-party dependencies, coordinating upgrade cycles for security and compliance.",
+          "Design, build, and support 60+ live, production-ready Dynamic Message Object (DMO) compilations in Java, defining cross-product messaging schemas and data contracts.",
+          "Develop and maintain backend services in Java and Spring Boot, ensuring cross-environment compatibility and managing release branch promotion for QA validation.",
+          "Provide production support and infrastructure troubleshooting to 7 engineering teams, performing root cause analysis on messaging, deployment, and dependency issues.",
+          "Author JUnit and Jest unit and integration tests and automate delivery through Jenkins CI/CD pipelines, maintaining code quality across releases."
+        ]
       },
       {
         "company": "MarketCOL",
-        "title": "Team Member && React Specialist",
-        "years": "Sept 2019 - Feb 2023",
-        "description": [
-           {
-             "one": "Designed Dashboard components and testing methods to increase the efficiency of application by 20%.",
-             "two": "Revamped 30+ web components using HTML, CSS and designing tools improve functionalities by 50%",
-             "three" : "Refactoring code for maintaining and scalability of the application, providing additional perspective reviewing code."
-           }]
-      },
-      {
-        "company": "Learning Assistant at NJIT",
-        "title": "",
-        "years": "Jun 2020 - Aug 2020",
-        "description": [
-           {
-             "one": "Facilitated 20+ workshops and discussions to help 40+ students with courses in Computer Science.",
-             "two": "Developed 5 tutorials on how to write computer programs and solve engineering problems.",
-             "three": ""
-           }]
+        "title": "Front End Engineer (Apprenticeship)",
+        "location": "Newark, NJ",
+        "years": "September 2019 - June 2020",
+        "highlights": [
+          "Improved application efficiency 20% and expanded functionality 50% within 9 months by revamping 30+ reusable UI components using JavaScript (ES6), TypeScript, and React.js."
+        ]
       },
       {
         "company": "SunTrust Bank",
-        "title": "Front End Developer",
-        "years": "Jan 2019 - May 2019",
-        "description": [
-           {
-             "one": "Assisted in building beautiful UI for clients without compromising functionality for aesthetics.",
-             "two": "Unit testing in Jest to ensure code was 100mostly bug free."
-           }]
+        "title": "Front End / UI Developer (Apprenticeship)",
+        "location": "Atlanta, GA",
+        "years": "January 2019 - May 2019",
+        "highlights": [
+          "Built and unit-tested reusable UI components for internal banking tools using JavaScript, HTML5, CSS3, and Jest."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Yahoo Finance",
+        "url": "yhfinance.netlify.app",
+        "years": "Nov 2023 - Present",
+        "highlights": [
+          "Built a real-time single-page application on the MERN stack (MongoDB, Express.js, React.js, Node.js) with WebSocket streaming and third-party market-data APIs (Finnhub, Financial Modeling Prep); automated regression testing with Selenium."
+        ]
+      },
+      {
+        "name": "AWS Console",
+        "url": "awsui.netlify.app",
+        "years": "Nov 2022 - Present",
+        "highlights": [
+          "Implemented AWS Cognito authentication and an AWS Cloudscape design-system UI backed by GraphQL and AWS Amplify; added a caching layer that reduced API response times 50% and server costs 15%.",
+          "Refactored legacy code with cross-functional teams, reducing system errors 40% and delivering 5 features ahead of schedule."
+        ]
+      }
+    ],
+    "skillGroups": [
+      {
+        "label": "Languages",
+        "items": "Java, JavaScript (ES6), TypeScript, Python, SQL, Bash, XML, JSON, YAML"
+      },
+      {
+        "label": "Messaging & Event Streaming",
+        "items": "Apache Kafka, Kafka Topic Management, Kafka Producer/Consumer APIs, Event-Driven Architecture, Message Queues, Publish-Subscribe, Real-Time Data Streaming, Distributed Systems"
+      },
+      {
+        "label": "Backend & APIs",
+        "items": "Spring, Spring Boot, Node.js, Express.js, RESTful API Design, GraphQL, WebSockets, Microservices"
+      },
+      {
+        "label": "DevOps, CI/CD & Cloud",
+        "items": "Jenkins, CI/CD Pipelines, Docker, Kubernetes, Terraform, Infrastructure as Code, AWS (EC2, ECS, S3, RDS, ECR, Secrets Manager, Redis, Cognito), Git, GitHub, GitLab, Maven, Gradle, Linux/Unix, Release Management"
+      },
+      {
+        "label": "Security & Vulnerability Management",
+        "items": "CVE Triage, Vulnerability Remediation, Dependency Patching (Maven/Gradle), Linux Package Patching, Security Compliance, Key Management, Cryptography"
+      },
+      {
+        "label": "Testing & Quality",
+        "items": "JUnit, Jest, Cypress, Selenium, Unit Testing, Integration Testing, Test-Driven Development (TDD), Code Review"
+      },
+      {
+        "label": "Databases",
+        "items": "MySQL, Microsoft SQL Server, PostgreSQL, Redis, RDBMS, Database Design, Query Optimization, DBeaver"
+      },
+      {
+        "label": "Frontend",
+        "items": "React.js, Redux, Vue.js, jQuery, HTML5, CSS3, Responsive Design"
+      },
+      {
+        "label": "Architecture & Practices",
+        "items": "Distributed Computing, High Availability, Scalability, Fault Tolerance, System Design, Multithreading & Concurrency, Agile/Scrum, SDLC, Code Refactoring, Root Cause Analysis, Production Support"
       }
     ],
     "skills": [
       {
+        "name": "Java",
+        "level": "95%"
+      },
+      {
+        "name": "Kafka",
+        "level": "90%"
+      },
+      {
+        "name": "Spring",
+        "level": "90%"
+      },
+      {
         "name": "ReactJs",
         "level": "100%"
       },
-      
       {
         "name": "Typescript",
         "level": "80%"
       },
       {
-        "name": "Java",
-        "level": "70%"
-      },
-      {
-        "name": "PostgreSQL",
-        "level": "70%"
+        "name": "NodeJS",
+        "level": "80%"
       },
       {
         "name": "Express",
         "level": "75%"
       },
       {
-        "name": "NodeJS",
-        "level": "80%"
+        "name": "PostgreSQL",
+        "level": "70%"
       },
       {
         "name": "AWS Cloud",
@@ -148,6 +224,162 @@
         "name": "CI/CD",
         "level": "90%"
       }
+    ],
+    "atsKeywords": [
+      "Java",
+      "J2EE",
+      "JavaScript",
+      "ES6",
+      "TypeScript",
+      "Python",
+      "SQL",
+      "XML",
+      "JSON",
+      "YAML",
+      "Bash",
+      "Shell Scripting",
+      "Apache Kafka",
+      "Kafka",
+      "Kafka Topic Management",
+      "Kafka Streams",
+      "Message Queues",
+      "Event-Driven Architecture",
+      "Publish-Subscribe",
+      "Real-Time Data Streaming",
+      "Distributed Systems",
+      "Dynamic Message Objects",
+      "Spring",
+      "Spring Boot",
+      "Spring MVC",
+      "Hibernate",
+      "Node.js",
+      "Express.js",
+      "React",
+      "React.js",
+      "Redux",
+      "Vue.js",
+      "jQuery",
+      "HTML5",
+      "CSS3",
+      "REST",
+      "RESTful APIs",
+      "API Design",
+      "API Development",
+      "GraphQL",
+      "WebSockets",
+      "Microservices",
+      "Microservices Architecture",
+      "SOA",
+      "Jenkins",
+      "CI/CD",
+      "Continuous Integration",
+      "Continuous Deployment",
+      "Docker",
+      "Kubernetes",
+      "Containerization",
+      "Terraform",
+      "Infrastructure as Code",
+      "AWS",
+      "Amazon Web Services",
+      "EC2",
+      "S3",
+      "AWS Amplify",
+      "AWS Cognito",
+      "GCP",
+      "Azure",
+      "Cloud Computing",
+      "GitLab",
+      "GitHub",
+      "Git",
+      "Version Control",
+      "Maven",
+      "Gradle",
+      "Build Automation",
+      "Release Management",
+      "Deployment Automation",
+      "Linux",
+      "Unix",
+      "Monitoring",
+      "Logging",
+      "Observability",
+      "Production Support",
+      "On-Call",
+      "Incident Response",
+      "Root Cause Analysis",
+      "Vulnerability Remediation",
+      "CVE Triage",
+      "Dependency Patching",
+      "Security Compliance",
+      "Cryptography",
+      "Key Management",
+      "Application Security",
+      "Secure Coding",
+      "JUnit",
+      "Jest",
+      "Mockito",
+      "Cypress",
+      "Selenium",
+      "Unit Testing",
+      "Integration Testing",
+      "Test Automation",
+      "Regression Testing",
+      "TDD",
+      "QA",
+      "MySQL",
+      "Microsoft SQL Server",
+      "PostgreSQL",
+      "Redis",
+      "MongoDB",
+      "RDBMS",
+      "DBeaver",
+      "Database Design",
+      "Data Modeling",
+      "Query Optimization",
+      "Caching",
+      "Stored Procedures",
+      "Data Structures",
+      "Algorithms",
+      "Object-Oriented Programming",
+      "OOP",
+      "Design Patterns",
+      "Multithreading",
+      "Concurrency",
+      "Multi-Threaded Processing",
+      "Performance Tuning",
+      "Optimization",
+      "Debugging",
+      "Troubleshooting",
+      "System Design",
+      "Software Architecture",
+      "Scalability",
+      "High Availability",
+      "Fault Tolerance",
+      "Load Balancing",
+      "Distributed Computing",
+      "Backend Development",
+      "Full Stack Development",
+      "Front End Development",
+      "Software Development Life Cycle",
+      "SDLC",
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "JIRA",
+      "Confluence",
+      "Code Review",
+      "Code Refactoring",
+      "Technical Documentation",
+      "Cross-Functional Collaboration",
+      "Mentoring",
+      "Pair Programming",
+      "Stakeholder Communication",
+      "Financial Services",
+      "Capital Markets",
+      "Trading Systems",
+      "Electronic Trading",
+      "Low Latency",
+      "Real-Time Systems",
+      "Fintech"
     ]
   },
   "portfolio": {

@@ -1,5 +1,26 @@
 import React, { Component } from "react";
 
+// Split a skill group's comma-separated items without breaking on the commas
+// inside parentheses, e.g. "AWS (EC2, Amplify, Cognito)" stays one tag.
+function splitItems(items) {
+  var out = [];
+  var depth = 0;
+  var current = "";
+  for (var i = 0; i < items.length; i++) {
+    var ch = items[i];
+    if (ch === "(") depth++;
+    if (ch === ")") depth--;
+    if (ch === "," && depth === 0) {
+      out.push(current.trim());
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+  if (current.trim()) out.push(current.trim());
+  return out.filter(Boolean);
+}
+
 class Resume extends Component {
   render() {
     if (this.props.data) {
@@ -27,23 +48,34 @@ class Resume extends Component {
               {work?.title}
               <span>&bull;</span> <em className="date">{work?.years}</em>
             </p>
-            {work.description.map((w) => (
-              <div>
-                <ul className="ul disc">{w?.one}</ul>
-                <ul className="ul disc">{w?.two}</ul>
-                <ul className="disc">{w?.three}</ul>
-              </div>
-            ))}
+            <ul className="disc">
+              {work?.highlights?.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
           </div>
         );
       });
-      var skills = this.props.data.skills.map(function (skills) {
-        var className = "bar-expand " + skills.name.toLowerCase();
+      // Prefer the grouped skills; fall back to the flat list if absent.
+      var groups = this.props.data.skillGroups;
+      if (!groups && this.props.data.skills) {
+        groups = [
+          {
+            label: "Skills",
+            items: this.props.data.skills.map((s) => s.name).join(", "),
+          },
+        ];
+      }
+      var skills = (groups || []).map(function (group) {
         return (
-          <li key={skills.name}>
-            <span style={{ width: skills.level }} className={className}></span>
-            <em>{skills.name}</em>
-          </li>
+          <div className="skill-group" key={group.label}>
+            <h4>{group.label}</h4>
+            <ul className="skill-tags">
+              {splitItems(group.items).map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         );
       });
     }
@@ -82,11 +114,9 @@ class Resume extends Component {
           </div>
 
           <div className="nine columns main-col">
-            <p>{skillmessage}</p>
+            <p className="skill-message">{skillmessage}</p>
 
-            <div className="bars">
-              <ul className="skills">{skills}</ul>
-            </div>
+            <div className="skill-groups">{skills}</div>
           </div>
         </div>
       </section>

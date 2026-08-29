@@ -1,0 +1,175 @@
+/* ------------------------------------------------------------------ */
+/*  Resume section refinements
+/*  Loaded after public/css/*.css, so these win on ties.
+/* ------------------------------------------------------------------ */
+
+/* --- Skills: grouped tags, replacing the old percentage bars --- */
+
+#resume .skill-message {
+  color: #6e7881;
+  margin-bottom: 24px;
+}
+
+/* The 10% gutter costs a tag per row; skills use the full column width. */
+#resume .skill .main-col {
+  padding-right: 0;
+}
+
+#resume .skill-group {
+  margin-bottom: 20px;
+}
+#resume .skill-group:last-child {
+  margin-bottom: 0;
+}
+
+#resume .skill-group h4 {
+  font:
+    13px/20px "opensans-bold",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #6e7881;
+  margin: 0 0 9px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#resume ul.skill-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+#resume ul.skill-tags li {
+  font:
+    13.5px/1 "opensans-regular",
+    sans-serif;
+  color: #313131;
+  background: #f6f8f9;
+  border: 1px solid #e2e7ea;
+  border-radius: 999px;
+  padding: 7px 13px;
+  margin: 0;
+  cursor: default;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+#resume ul.skill-tags li:hover {
+  background: #11abb0;
+  border-color: #11abb0;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* --- Spacing: separate stacked entries and open up the bullets --- */
+
+#resume .work .main-col > div + div {
+  margin-top: 34px;
+}
+#resume .education .twelve.columns > div + div {
+  margin-top: 28px;
+}
+
+#resume ul.disc {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+#resume ul.disc li {
+  line-height: 26px;
+  margin-bottom: 7px;
+}
+#resume ul.disc li:last-child {
+  margin-bottom: 0;
+}
+
+/* The heading sat tight against the entry below it. */
+#resume h3 {
+  margin-bottom: 2px;
+}
+#resume .info {
+  margin-bottom: 12px;
+}
+
+/* --- Narrow screens: the 10% right gutter wastes width on mobile --- */
+
+@media only screen and (max-width: 767px) {
+  #resume .main-col {
+    padding-right: 0;
+  }
+  #resume ul.skill-tags li {
+    font-size: 13px;
+    padding: 7px 13px;
+  }
+}
+
+/* The check icon sat flush against the text, and had no accent colour. */
+#resume .fa-check {
+  margin-right: 8px;
+  color: #11abb0;
+}
+
+/* The nav is position:fixed, so a direct #resume link landed under it. */
+#resume {
+  scroll-margin-top: 70px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Vertical rhythm
+/*
+/*  Sections each defined their own padding (96/66, 90/72, 90/60,
+/*  96/66, 96/102), so every boundary stacked one section's bottom
+/*  padding onto the next one's top: 195px, 168px, 242px and 210px of
+/*  contiguous blank space. One scale, applied to all of them.
+/* ------------------------------------------------------------------ */
+
+:root {
+  --section-pad: 64px;
+}
+
+#about,
+#resume,
+#portfolio,
+#contact {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+}
+
+/* Testimonials pads an inner container rather than the section. */
+#testimonials .text-container {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+}
+
+footer {
+  padding-top: 44px;
+  margin-bottom: 32px;
+}
+
+/* Portfolio rows sat 74px apart. */
+#portfolio-wrapper .columns {
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --section-pad: 44px;
+  }
+}
+
+/* Trailing margins on each section's last element stacked on top of the
+   section padding, so boundaries drifted 24-30px past the scale above. */
+#about p.address {
+  margin-bottom: 0;
+}
+#portfolio-wrapper {
+  margin-bottom: -24px; /* absorbs the final grid row's margin */
+}
+#testimonials blockquote {
+  margin-bottom: 0;
+}
